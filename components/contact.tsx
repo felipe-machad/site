@@ -59,7 +59,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-                  <p className="text-muted-foreground">(51) 99999-9999</p>
+                  <p className="text-muted-foreground">(51) 9 9126-4309</p>
                   <p className="text-sm text-muted-foreground mt-1">WhatsApp para agendamentos</p>
                 </div>
               </div>
