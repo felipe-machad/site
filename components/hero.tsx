@@ -95,7 +95,7 @@ export function Hero() {
             >
               <span className="bg-secondary/90 backdrop-blur-sm text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                 <Sparkles size={14} className="animate-pulse" />
-                Juliana Alves - CREFITO
+                Juliana Alves - CREFITO 280091-F
               </span>
             </div>
 
@@ -133,7 +133,7 @@ export function Hero() {
               }`}
             >
               <Link 
-                href="https://wa.me/5551999999999" 
+                href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
                 target="_blank"
                 className="group bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30 flex items-center justify-center gap-3"
               >

@@ -56,7 +56,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <Link
-                href="https://instagram.com/jufisioterapia"
+                href="https://instagram.com/jualves_fisiodermato"
                 target="_blank"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Instagram"
@@ -64,7 +64,7 @@ export function Footer() {
                 <Instagram size={20} />
               </Link>
               <Link
-                href="https://wa.me/5551999999999"
+                href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
                 target="_blank"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-[#25D366] hover:text-white transition-colors"
                 aria-label="WhatsApp"
@@ -80,7 +80,7 @@ export function Footer() {
             © {new Date().getFullYear()} Juliana Alves - Fisioterapia Dermatofuncional. Todos os direitos reservados.
           </p>
           <p className="text-xs text-muted-foreground">
-            CREFITO 5/XXXXX-F
+            Desenvolvido Por FFuture.AI
           </p>
         </div>
       </div>

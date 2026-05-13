@@ -11,7 +11,7 @@ const highlights = [
   "Massagem Relaxante",
   "Radiofrequência Facial",
   "Peeling de Diamante",
-  "Microagulhamento",
+  "Fisioterapia Funcional",
 ]
 
 export function Header() {
@@ -70,7 +70,7 @@ export function Header() {
               </p>
               <p className="text-xs text-muted-foreground tracking-wide flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Fisioterapeuta Dermatofuncional
+                Fisioterapeuta & Dermatofuncional
               </p>
             </div>
           </Link>
@@ -82,7 +82,7 @@ export function Header() {
             <NavLink href="#servicos">Serviços</NavLink>
             <NavLink href="#contato">Contato</NavLink>
             <Link 
-              href="https://wa.me/5551999999999" 
+              href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
               target="_blank"
               className="ml-4 bg-gradient-to-r from-primary to-primary/80 text-card px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center gap-2 group"
             >
@@ -125,7 +125,7 @@ export function Header() {
             Contato
           </MobileNavLink>
           <Link 
-            href="https://wa.me/5551999999999" 
+            href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
             target="_blank"
             className="mt-3 bg-gradient-to-r from-primary to-primary/80 text-card px-6 py-3 rounded-full text-sm font-medium text-center flex items-center justify-center gap-2"
             onClick={() => setIsMenuOpen(false)}

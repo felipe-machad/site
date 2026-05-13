@@ -98,7 +98,7 @@ export function Contact() {
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                  Anamnese completa e histórico de saúde
+                  Análise completa e histórico de saúde
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
@@ -117,7 +117,7 @@ export function Contact() {
 
             <div className="space-y-4">
               <Link
-                href="https://wa.me/5551999999999"
+                href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
                 target="_blank"
                 className="w-full bg-[#25D366] text-white px-6 py-4 rounded-xl font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-3"
               >
@@ -126,7 +126,7 @@ export function Contact() {
               </Link>
 
               <Link
-                href="https://instagram.com/jufisioterapia"
+                href="https://instagram.com/jualves_fisiodermato"
                 target="_blank"
                 className="w-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white px-6 py-4 rounded-xl font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-3"
               >
