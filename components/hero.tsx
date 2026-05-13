@@ -54,7 +54,7 @@ export function Hero() {
 
   useEffect(() => {
     if (!isAutoPlaying) return
-    const interval = setInterval(nextSlide, 5000)
+    const interval = setInterval(nextSlide, 3000)
     return () => clearInterval(interval)
   }, [isAutoPlaying, nextSlide])
 
@@ -152,24 +152,6 @@ export function Hero() {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute inset-y-0 left-4 sm:left-8 flex items-center z-20">
-        <button
-          onClick={() => { prevSlide(); setIsAutoPlaying(false); }}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 group"
-          aria-label="Slide anterior"
-        >
-          <ChevronLeft size={24} className="group-hover:-translate-x-0.5 transition-transform" />
-        </button>
-      </div>
-      <div className="absolute inset-y-0 right-4 sm:right-8 flex items-center z-20">
-        <button
-          onClick={() => { nextSlide(); setIsAutoPlaying(false); }}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 group"
-          aria-label="Próximo slide"
-        >
-          <ChevronRight size={24} className="group-hover:translate-x-0.5 transition-transform" />
-        </button>
-      </div>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
