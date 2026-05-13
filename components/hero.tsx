@@ -54,7 +54,7 @@ export function Hero() {
 
   useEffect(() => {
     if (!isAutoPlaying) return
-    const interval = setInterval(nextSlide, 3000)
+    const interval = setInterval(nextSlide, 4700)
     return () => clearInterval(interval)
   }, [isAutoPlaying, nextSlide])
 
