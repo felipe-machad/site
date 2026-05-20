@@ -80,7 +80,15 @@ export function Footer() {
             © {new Date().getFullYear()} Juliana Alves - Fisioterapia Dermatofuncional. Todos os direitos reservados.
           </p>
           <p className="text-xs text-muted-foreground">
-            Desenvolvido Por FFuture.AI
+            Desenvolvido por{" "}
+            <a
+              href="https://api.whatsapp.com/send/?phone=555193706131&text=Olá. Gostaria de saber mais sobre seus serviços de IA."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary underline"
+            >
+              FFuture.AI
+            </a>
           </p>
         </div>
       </div>
