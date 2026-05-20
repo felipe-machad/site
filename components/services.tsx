@@ -22,11 +22,11 @@ const serviceCategories = [
     description: "Recuperação fisioterapêutica especializada para cirurgias plásticas e procedimentos estéticos",
     services: [
       {
-        name: "Pós-Operatório de Cirurgias Plásticas",
-        description: "Tratamento fisioterapêutico essencial para recuperação de abdominoplastia, lipoaspiração, mamoplastia e outras cirurgias. Inclui drenagem linfática, ultrassom terapêutico e técnicas manuais para prevenir fibroses e acelerar a cicatrização.",
-        benefits: ["Prevenção de fibroses", "Redução de edema", "Aceleração da cicatrização", "Recuperação mais rápida"],
-        duration: "60-90 minutos",
-        indication: "Indicado a partir do 1º dia pós-operatório, conforme liberação médica"
+        name: "Fisioterapia Pós-Operatória",
+        description: "Acompanhamento fisioterapêutico voltado à recuperação no pós-operatório de diferentes cirurgias, auxiliando na redução de dores, inchaço, melhora da mobilidade e retorno funcional. Utiliza recursos manuais e terapêuticos conforme a necessidade de cada paciente.",
+        benefits: ["Redução de edema", "Alívio de dores", "Melhora da mobilidade", "Recuperação funcional"],
+        duration: "50-80 minutos",
+        indication: "Indicado para recuperação pós-cirúrgica, reabilitação funcional e acompanhamento conforme orientação profissional"
       },
       {
         name: "Tratamento de Fibroses",
