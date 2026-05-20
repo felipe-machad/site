@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { Instagram, MessageCircle } from "lucide-react"
 
@@ -20,9 +22,10 @@ export function Footer() {
   return (
     <footer className="py-12 px-4 border-t border-border">
       <div className="max-w-6xl mx-auto">
+
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          
-          {/* Logo & Info */}
+
+          {/* LOGO */}
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
@@ -43,99 +46,74 @@ export function Footer() {
             </div>
 
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Fisioterapia Dermatofuncional especializada em reabilitação, 
-              tratamentos estéticos e bem-estar. Atendimento individualizado 
-              com protocolos baseados em evidências científicas.
+              Fisioterapia Dermatofuncional especializada em reabilitação,
+              tratamentos estéticos e bem-estar.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* NAV */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Navegação</h4>
+            <h4 className="font-semibold text-foreground mb-4">
+              Navegação
+            </h4>
 
             <nav className="space-y-2">
-              <button
-                onClick={() => scrollToSection("inicio")}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-              >
+              <button onClick={() => scrollToSection("inicio")} className="text-sm text-muted-foreground hover:text-foreground block">
                 Início
               </button>
 
-              <button
-                onClick={() => scrollToSection("sobre")}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-              >
-                Sobre a Fisioterapia
+              <button onClick={() => scrollToSection("sobre")} className="text-sm text-muted-foreground hover:text-foreground block">
+                Sobre
               </button>
 
-              <button
-                onClick={() => scrollToSection("servicos")}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-              >
-                Tratamentos
+              <button onClick={() => scrollToSection("servicos")} className="text-sm text-muted-foreground hover:text-foreground block">
+                Serviços
               </button>
 
-              <button
-                onClick={() => scrollToSection("contato")}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-              >
+              <button onClick={() => scrollToSection("contato")} className="text-sm text-muted-foreground hover:text-foreground block">
                 Contato
               </button>
             </nav>
           </div>
 
-          {/* Social */}
+          {/* SOCIAL */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">
               Redes Sociais
             </h4>
 
-            <p className="text-sm text-muted-foreground mb-4">
-              Acompanhe dicas de saúde, cuidados e novidades sobre fisioterapia dermatofuncional.
-            </p>
-
             <div className="flex gap-3">
               <a
                 href="https://instagram.com/jualves_fisiodermato"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center"
               >
                 <Instagram size={20} />
               </a>
 
               <a
-                href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
+                href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-[#25D366] hover:text-white transition-colors"
-                aria-label="WhatsApp"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center"
               >
                 <MessageCircle size={20} />
               </a>
             </div>
           </div>
+
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* BOTTOM */}
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Juliana Alves - Fisioterapia Dermatofuncional. Todos os direitos reservados.
+            © {new Date().getFullYear()} Juliana Alves
           </p>
 
           <p className="text-xs text-muted-foreground">
-            Desenvolvido por{" "}
-            <a
-              href="https://api.whatsapp.com/send/?phone=555193706131&text=Olá. Gostaria de saber mais sobre seus serviços de IA."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary underline"
-            >
-              FFuture.AI
-            </a>
+            Desenvolvido por FFuture.AI
           </p>
         </div>
+
       </div>
     </footer>
   )

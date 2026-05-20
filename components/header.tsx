@@ -13,18 +13,7 @@ const highlights = [
   "Peeling de Diamante",
   "Fisioterapia Funcional",
 ]
-const scrollToSection = (id: string) => {
-  const el = document.getElementById(id)
-  if (!el) return
 
-  const headerOffset = 120 // altura do teu header
-  const elementPosition = el.getBoundingClientRect().top + window.scrollY
-
-  window.scrollTo({
-    top: elementPosition - headerOffset,
-    behavior: "smooth",
-  })
-}
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentHighlight, setCurrentHighlight] = useState(0)
@@ -38,155 +27,148 @@ export function Header() {
         setIsVisible(true)
       }, 300)
     }, 3000)
+
     return () => clearInterval(interval)
   }, [])
 
+  // ✅ SCROLL CORRETO DENTRO DO COMPONENTE
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (!el) return
+
+    const headerOffset = 120
+    const elementPosition = el.getBoundingClientRect().top + window.scrollY
+
+    window.scrollTo({
+      top: elementPosition - headerOffset,
+      behavior: "smooth",
+    })
+  }
+
+  const handleMobileClick = (id: string) => {
+    scrollToSection(id)
+    setIsMenuOpen(false)
+  }
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 scroll-mt-32">
-      {/* Barra de destaques com carrossel */}
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* BARRA DE DESTAQUES */}
       <div className="bg-gradient-to-r from-primary via-primary/90 to-primary overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-2">
           <Sparkles size={14} className="text-secondary animate-pulse" />
+
           <div className="flex items-center gap-2 overflow-hidden">
-            <span className="text-xs text-primary-foreground/80 whitespace-nowrap">Destaque:</span>
-            <span 
+            <span className="text-xs text-primary-foreground/80 whitespace-nowrap">
+              Destaque:
+            </span>
+
+            <span
               className={`text-xs font-medium text-card whitespace-nowrap transition-all duration-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
               }`}
             >
               {highlights[currentHighlight]}
             </span>
           </div>
+
           <Sparkles size={14} className="text-secondary animate-pulse" />
         </div>
       </div>
 
-      {/* Header principal */}
+      {/* HEADER PRINCIPAL */}
       <div className="bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-0 group-hover:opacity-50 blur transition-opacity duration-300"></div>
-              <Image
-                src="/logo.png"
-                alt="Juliana Alves - Fisioterapeuta Dermatofuncional"
-                width={50}
-                height={50}
-                className="relative rounded-full ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300"
-              />
-            </div>
+          
+          {/* LOGO */}
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Juliana Alves"
+              width={50}
+              height={50}
+              className="rounded-full"
+            />
+
             <div className="hidden sm:block">
-              <p className="font-serif text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+              <p className="font-semibold text-foreground">
                 Juliana Alves
               </p>
-              <p className="text-xs text-muted-foreground tracking-wide flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Fisioterapeuta & Dermatofuncional
+              <p className="text-xs text-muted-foreground">
+                Fisioterapeuta Dermatofuncional
               </p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-            <Link 
-              href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
+          {/* DESKTOP MENU */}
+          <nav className="hidden md:flex items-center gap-4">
+            <button onClick={() => scrollToSection("inicio")}>
+              Início
+            </button>
+
+            <button onClick={() => scrollToSection("sobre")}>
+              Sobre
+            </button>
+
+            <button onClick={() => scrollToSection("servicos")}>
+              Serviços
+            </button>
+
+            <button onClick={() => scrollToSection("contato")}>
+              Contato
+            </button>
+
+            <Link
+              href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá"
               target="_blank"
-              className="ml-4 bg-gradient-to-r from-primary to-primary/80 text-card px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center gap-2 group"
+              className="ml-4 bg-primary text-white px-6 py-2 rounded-full text-sm"
             >
-              <span className="relative">
-                <span className="absolute inset-0 rounded-full bg-secondary/30 animate-ping"></span>
-                <span className="relative w-2 h-2 rounded-full bg-secondary block"></span>
-              </span>
               Agendar Consulta
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button 
+          {/* MOBILE BUTTON */}
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:bg-muted rounded-lg transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden p-2"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div 
-        className={`md:hidden bg-card/98 backdrop-blur-md border-b border-border overflow-hidden transition-all duration-300 ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      {/* MOBILE MENU */}
+      <div
+        className={`md:hidden bg-card border-b border-border overflow-hidden transition-all duration-300 ${
+          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="px-4 py-4 flex flex-col gap-1">
-          <MobileNavLink href="#inicio" onClick={() => setIsMenuOpen(false)}>
+        <nav className="px-4 py-4 flex flex-col gap-3">
+          <button onClick={() => handleMobileClick("inicio")}>
             Início
-          </MobileNavLink>
-          <MobileNavLink href="#sobre" onClick={() => setIsMenuOpen(false)}>
+          </button>
+
+          <button onClick={() => handleMobileClick("sobre")}>
             Sobre
-          </MobileNavLink>
-          <MobileNavLink href="#servicos" onClick={() => setIsMenuOpen(false)}>
+          </button>
+
+          <button onClick={() => handleMobileClick("servicos")}>
             Serviços
-          </MobileNavLink>
-          <MobileNavLink href="#contato" onClick={() => setIsMenuOpen(false)}>
+          </button>
+
+          <button onClick={() => handleMobileClick("contato")}>
             Contato
-          </MobileNavLink>
-          <Link 
-            href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
+          </button>
+
+          <Link
+            href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá"
             target="_blank"
-            className="mt-3 bg-gradient-to-r from-primary to-primary/80 text-card px-6 py-3 rounded-full text-sm font-medium text-center flex items-center justify-center gap-2"
             onClick={() => setIsMenuOpen(false)}
+            className="bg-primary text-white px-4 py-3 rounded-full text-center"
           >
-            <span className="relative">
-              <span className="absolute inset-0 rounded-full bg-secondary/30 animate-ping"></span>
-              <span className="relative w-2 h-2 rounded-full bg-secondary block"></span>
-            </span>
             Agendar Consulta
           </Link>
         </nav>
       </div>
     </header>
-  )
-}
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  const id = href.replace("#", "")
-
-  return (
-    <button
-      onClick={() => scrollToSection(id)}
-      className="relative px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
-    >
-      {children}
-      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
-    </button>
-  )
-}
-function MobileNavLink({
-  href,
-  onClick,
-  children
-}: {
-  href: string
-  onClick: () => void
-  children: React.ReactNode
-}) {
-  const id = href.replace("#", "")
-
-  return (
-    <button
-      onClick={() => {
-        scrollToSection(id)
-        onClick()
-      }}
-      className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all flex items-center gap-3"
-    >
-      <span className="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
-      {children}
-    </button>
   )
 }
