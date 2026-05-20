@@ -8,7 +8,7 @@ import { useState, useEffect, useCallback } from "react"
 const slides = [
   {
     image: "/images/drenagem-linfatica.jpg",
-    title: "Fisioterapia Pós-Operatória",
+    title: "Fisio Pós-Operatória",
     subtitle: "Drenagem Linfática Manual e Recuperação Funcional",
     description:
       "Atendimento fisioterapêutico essencial no pós-operatório, auxiliando na redução de inchaços, melhora da cicatrização e recuperação do organismo.",
