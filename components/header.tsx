@@ -13,7 +13,18 @@ const highlights = [
   "Peeling de Diamante",
   "Fisioterapia Funcional",
 ]
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id)
+  if (!el) return
 
+  const headerOffset = 120 // altura do teu header
+  const elementPosition = el.getBoundingClientRect().top + window.scrollY
+
+  window.scrollTo({
+    top: elementPosition - headerOffset,
+    behavior: "smooth",
+  })
+}
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentHighlight, setCurrentHighlight] = useState(0)
@@ -77,10 +88,10 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            <NavLink href="#inicio">Início</NavLink>
-            <NavLink href="#sobre">Sobre</NavLink>
-            <NavLink href="#servicos">Serviços</NavLink>
-            <NavLink href="#contato">Contato</NavLink>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
             <Link 
               href="https://api.whatsapp.com/send/?phone=555191264309&text=Olá, vim do site e gostaria de saber mais sobre seus serviços."
               target="_blank"
@@ -143,14 +154,16 @@ export function Header() {
 }
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const id = href.replace("#", "")
+
   return (
-    <a
-      href={href}
+    <button
+      onClick={() => scrollToSection(id)}
       className="relative px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
     >
       {children}
       <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
-    </a>
+    </button>
   )
 }
 function MobileNavLink({
@@ -162,14 +175,18 @@ function MobileNavLink({
   onClick: () => void
   children: React.ReactNode
 }) {
+  const id = href.replace("#", "")
+
   return (
-    <a
-      href={href}
-      onClick={onClick}
+    <button
+      onClick={() => {
+        scrollToSection(id)
+        onClick()
+      }}
       className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all flex items-center gap-3"
     >
       <span className="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
       {children}
-    </a>
+    </button>
   )
 }

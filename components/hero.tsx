@@ -7,29 +7,34 @@ import { useState, useEffect, useCallback } from "react"
 
 const slides = [
   {
+    image: "/images/drenagem-linfatica.jpg",
+    title: "Fisioterapia Pós-Operatória",
+    subtitle: "Drenagem Linfática Manual e Recuperação Funcional",
+    description:
+      "Atendimento fisioterapêutico essencial no pós-operatório, auxiliando na redução de inchaços, melhora da cicatrização e recuperação do organismo.",
+  },
+  {
     image: "/images/tratamento-facial.jpg",
     title: "Tratamentos Faciais",
-    subtitle: "Limpeza de Pele, Peeling, Microagulhamento",
-    description: "Renove sua pele com tratamentos personalizados que devolvem a vitalidade e luminosidade do seu rosto.",
+    subtitle: "Limpeza de Pele, Peeling, Microagulhamento, Fotorejuvenescimento",
+    description:
+      "Cuidados faciais personalizados que ajudam a renovar a pele, melhorar a textura e trazer mais vitalidade e luminosidade ao rosto.",
   },
   {
     image: "/images/massagem-relaxante.jpg",
     title: "Massagens Terapêuticas",
-    subtitle: "Relaxante, Modeladora, Pedras Quentes",
-    description: "Momentos de relaxamento profundo que aliviam tensões e proporcionam bem-estar completo.",
+    subtitle: "Relaxante, Modeladora, Ventosaterapia, Dry Needling",
+    description:
+      "Técnicas que aliviam tensões, melhoram a circulação e promovem relaxamento profundo e bem-estar no dia a dia.",
   },
   {
     image: "/images/tratamento-corporal.jpg",
-    title: "Estética Corporal",
+    title: "Tratamentos Corporais",
     subtitle: "Radiofrequência, Criolipólise, Endermologia",
-    description: "Tecnologias avançadas para modelagem corporal, redução de medidas e firmeza da pele.",
+    description:
+      "Procedimentos que auxiliam na redução de medidas, firmeza da pele e melhora do contorno corporal de forma progressiva.",
   },
-  {
-    image: "/images/drenagem-linfatica.jpg",
-    title: "Drenagem Linfática",
-    subtitle: "Manual e Pós-operatório",
-    description: "Elimine toxinas, reduza inchaços e acelere sua recuperação com técnicas especializadas.",
-  },
+
 ]
 
 export function Hero() {
