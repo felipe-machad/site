@@ -104,13 +104,21 @@ export function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Juliana Alves
+            © 2026 Juliana Alves - Fisioterapia Dermatofuncional. Todos os direitos reservados.
           </p>
 
           <p className="text-xs text-muted-foreground">
-            Desenvolvido por FFuture.AI
+            Desenvolvido por{" "}
+            <a
+              href="https://api.whatsapp.com/send/?phone=555193706131&text=Olá. Gostaria de saber mais sobre seus serviços de IA."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary underline"
+            >
+              FFuture.AI
+            </a>
           </p>
         </div>
 
