@@ -59,7 +59,7 @@ export function Hero() {
 
   useEffect(() => {
     if (!isAutoPlaying) return
-    const interval = setInterval(nextSlide, 4700)
+    const interval = setInterval(nextSlide, 4800)
     return () => clearInterval(interval)
   }, [isAutoPlaying, nextSlide])
 
@@ -192,7 +192,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-white/70 text-sm">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span>Atendimento Individual</span>
+                <span>Atendimento Especializado Individual</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/30" />
               <div className="flex items-center gap-2">
@@ -201,7 +201,7 @@ export function Hero() {
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/30" />
               <div className="flex items-center gap-2">
-                <span>Cachoeirinha Center - Sala 1085</span>
+                <span>Cachoeirinha Center - Sala 1108</span>
               </div>
             </div>
           </div>
