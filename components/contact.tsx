@@ -44,8 +44,8 @@ export function Contact() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                   <p className="text-muted-foreground">
-                    Flores da Cunha 905<br />
-                    Cachoeirinha Center - Sala 1085<br />
+                    Flores da Cunha 903<br />
+                    Cachoeirinha Center - Sala 1108<br />
                     Cachoeirinha, RS
                   </p>
                 </div>

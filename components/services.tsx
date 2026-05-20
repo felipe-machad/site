@@ -46,7 +46,7 @@ const serviceCategories = [
   },
   {
     id: "corporal",
-    name: "Fisioterapia Corporal",
+    name: "Tratamento Corporal",
     icon: Activity,
     color: "bg-secondary/30 text-secondary-foreground",
     description: "Tratamentos fisioterapêuticos para disfunções estéticas corporais com recursos manuais e tecnológicos",
@@ -79,13 +79,13 @@ const serviceCategories = [
         duration: "60 minutos",
         indication: "Indicado para gordura localizada e melhora do contorno corporal"
       },
-      {
+ /*     {
         name: "Carboxiterapia",
         description: "Aplicação terapêutica de gás carbônico medicinal que melhora a oxigenação e circulação local. Utilizado no tratamento de celulite, gordura localizada, estrias e olheiras.",
         benefits: ["Melhora da microcirculação", "Oxigenação tecidual", "Lipólise localizada", "Estímulo de colágeno"],
         duration: "30-45 minutos",
         indication: "Indicado para celulite, gordura localizada, estrias e flacidez"
-      },
+      },*/
       {
         name: "Criolipólise",
         description: "Procedimento não invasivo que utiliza resfriamento controlado para redução de gordura localizada através de apoptose das células adiposas. Requer avaliação fisioterapêutica prévia.",
@@ -97,7 +97,7 @@ const serviceCategories = [
   },
   {
     id: "facial",
-    name: "Fisioterapia Facial",
+    name: "Tratamento Facial",
     icon: Sparkles,
     color: "bg-primary/10 text-primary",
     description: "Tratamentos fisioterapêuticos para rejuvenescimento e saúde da pele facial",
@@ -131,11 +131,11 @@ const serviceCategories = [
         indication: "Indicado para todos os tipos de pele, especialmente oleosas e acneicas"
       },
       {
-        name: "LED Terapia / Fototerapia",
-        description: "Utilização de luz LED em diferentes comprimentos de onda para tratar diversas condições da pele. Promove cicatrização, reduz inflamação e estimula colágeno de forma não invasiva.",
-        benefits: ["Cicatrização acelerada", "Redução de inflamação", "Estímulo celular", "Tratamento de acne"],
-        duration: "20-30 minutos",
-        indication: "Indicado para acne, cicatrização, rejuvenescimento e pós-procedimentos"
+        name: "Fotorejuvenescimento",
+        description: "Tratamento estético não invasivo que utiliza recursos terapêuticos para melhorar a textura da pele, estimular a produção de colágeno e suavizar sinais do envelhecimento cutâneo.",
+        benefits: ["Estímulo de colágeno", "Melhora da textura da pele", "Redução de linhas finas", "Aspecto mais uniforme"],
+        duration: "30-50 minutos",
+        indication: "Indicado para rejuvenescimento facial, melhora da textura da pele e prevenção dos sinais de envelhecimento"
       }
     ]
   },
@@ -154,18 +154,18 @@ const serviceCategories = [
         indication: "Indicado para estresse, tensão muscular, ansiedade e autocuidado"
       },
       {
-        name: "Pedras Quentes / Termoterapia",
-        description: "Técnica que combina massagem com aplicação de pedras basálticas aquecidas. O calor promove vasodilatação, relaxamento muscular profundo e alívio de dores tensionais.",
-        benefits: ["Relaxamento profundo", "Alívio de dores", "Melhora da circulação", "Redução de espasmos"],
-        duration: "75-90 minutos",
-        indication: "Indicado para tensões musculares crônicas, estresse e dores nas costas"
+        name: "Ventosaterapia",
+        description: "Técnica terapêutica que utiliza ventosas para criar sucção na pele, estimulando a circulação sanguínea, liberando tensões musculares e auxiliando no alívio de dores e contraturas.",
+        benefits: ["Alívio de dores musculares", "Melhora da circulação", "Relaxamento muscular", "Redução de tensões"],
+        duration: "40-60 minutos",
+        indication: "Indicado para dores musculares, contraturas, tensões e melhora da circulação local"
       },
       {
-        name: "Bambuterapia",
-        description: "Massagem realizada com bambus de diferentes calibres que deslizam e rolam sobre o corpo. Promove drenagem, relaxamento e trabalho em tecidos mais profundos.",
-        benefits: ["Drenagem natural", "Relaxamento muscular", "Trabalho profundo", "Melhora da circulação"],
-        duration: "60 minutos",
-        indication: "Indicado para tensões musculares, retenção de líquidos e relaxamento"
+        name: "Dry Needling",
+        description: "Técnica que utiliza agulhas finas aplicadas em pontos gatilho musculares para aliviar dores, reduzir tensões e melhorar a função muscular de forma precisa.",
+        benefits: ["Alívio de dores", "Liberação de pontos gatilho", "Melhora da mobilidade", "Redução de tensões"],
+        duration: "30-50 minutos",
+        indication: "Indicado para dores musculares, pontos gatilho, tensão crônica e limitações de movimento"
       }
     ]
   },
@@ -183,13 +183,13 @@ const serviceCategories = [
         duration: "30-45 minutos",
         indication: "Indicado para rugas na testa, glabela, pés de galinha e hiperidrose"
       },
-      {
+/*      {
         name: "Preenchimento com Ácido Hialurônico",
         description: "Procedimento de bioestimulação e volumização facial com ácido hialurônico. Restaura volume perdido, hidrata profundamente e melhora o contorno facial de forma natural.",
         benefits: ["Restauração de volume", "Hidratação profunda", "Harmonização facial", "Resultado imediato"],
         duration: "45-60 minutos",
         indication: "Indicado para sulcos, olheiras, lábios e contorno facial"
-      },
+      },*/
       {
         name: "Intradermoterapia / Mesoterapia",
         description: "Técnica de microinjeções intradérmicas com substâncias ativas para tratamento localizado. Utilizado para gordura localizada, celulite, queda capilar e rejuvenescimento.",

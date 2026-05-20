@@ -95,7 +95,7 @@ export function Hero() {
             >
               <span className="bg-secondary/90 backdrop-blur-sm text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                 <Sparkles size={14} className="animate-pulse" />
-                Juliana Alves - CREFITO 280091-F
+                Juliana Alves - CREFITO 127903-F
               </span>
             </div>
 
