@@ -59,7 +59,7 @@ export function Hero() {
   }, [isAutoPlaying, nextSlide])
 
   return (
-    <section id="inicio" className="relative h-screen w-full overflow-hidden">
+    <section id="inicio" className="relative h-screen w-full overflow-hidden scroll-mt-32">
       {/* Background Images Carousel */}
       {slides.map((slide, index) => (
         <div

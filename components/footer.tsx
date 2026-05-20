@@ -4,7 +4,7 @@ import { Instagram, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="py-12 px-4 border-t border-border">
+    <footer className="py-12 px-4 border-t border-border scroll-mt-32">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo & Info */}

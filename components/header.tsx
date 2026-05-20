@@ -31,7 +31,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 scroll-mt-32">
       {/* Barra de destaques com carrossel */}
       <div className="bg-gradient-to-r from-primary via-primary/90 to-primary overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-2">
@@ -144,33 +144,32 @@ export function Header() {
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link 
-      href={href} 
+    <a
+      href={href}
       className="relative px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
     >
       {children}
       <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
-    </Link>
+    </a>
   )
 }
-
-function MobileNavLink({ 
-  href, 
-  onClick, 
-  children 
-}: { 
-  href: string; 
-  onClick: () => void; 
-  children: React.ReactNode 
+function MobileNavLink({
+  href,
+  onClick,
+  children
+}: {
+  href: string
+  onClick: () => void
+  children: React.ReactNode
 }) {
   return (
-    <Link 
-      href={href} 
-      className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all flex items-center gap-3"
+    <a
+      href={href}
       onClick={onClick}
+      className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all flex items-center gap-3"
     >
       <span className="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
       {children}
-    </Link>
+    </a>
   )
 }
